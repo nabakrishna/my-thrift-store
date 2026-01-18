@@ -18,22 +18,38 @@ A modern, responsive e-commerce web application designed for a sustainable thrif
 * **Deployment:** Vercel
 
 ## 📁 Project Structure
-* `index.html` — The main entry point and landing page.
-* `public/` — Contains core assets and secondary pages:
-    * `style.css` — Main stylesheet for the entire brand.
-    * `script.js` — Client-side logic and navigation.
-    * `cart.html`, `product.html`, `account.html` — User interface modules.
-    * `images/` — Product photography and brand assets.
+
+* **`index.html`** — The main landing page and entry point of the application.
+* **`public/`** — The core directory containing all site assets and logic:
+    * **`style.css`** — Global stylesheet containing the brand's aesthetic and layout rules.
+    * **`account.css`, `cart.css`, `checkout.css`** — Page-specific styles to keep code organized.
+    * **`entry.css`, `success.css`** — Styling for login/entry and post-purchase confirmation.
+    * **`script.js`** — Main JavaScript file handling navigation and UI interactions.
+    * **`account.js`, `cart.js`, `checkout.js`** — Logic for user profiles, cart state, and payments.
+    * **`order-history.js`, `entry.js`** — Scripts for data display and user authentication flows.
+    * **`*.html`** — Modular HTML files including Account, Cart, Checkout, Success, and Order History pages  
+    * **`cart.html` & `checkout.html`** — Pages for managing items and finalizing purchases.
+    * **`product.html`** — Template for viewing specific thrift items.
+    * **`account.html` & `order-history.html`** — User-specific views for profile and past orders.
+    * **`success.html`** — The confirmation page shown after a successful transaction.
+    * **`images/`** — Directory for product photography, logos, and UI icons.
+* **`.gitignore`** — Prevents unnecessary files (like `node_modules` or system logs) from being uploaded to GitHub.
+* **`vercel.json`** — Configuration file for Vercel deployment (handles routing and redirects).
+* **`package.json`** — Defines project metadata and any dependencies used during development.
+* **`README.md`** — Comprehensive documentation for the project.
 
 ## 🛠️ Local Development
 1. Clone this repository:
    ```bash
    git clone [https://github.com/nabakrishna/my-thrift-store.git](https://github.com/nabakrishna/my-thrift-store.git)
 2. Navigate to the project directory:
+      ```bash
    cd my-thrift-store
-3. Open index.html in your browser (use Live Server in VS Code for best results).
+4. Open index.html in your browser (use Live Server in VS Code for best results).
 
 ## 📝 License
  This project is part of my web development portfolio.
 
-Developed by N. K. Hazarika
+Developed by Naba Krishna Hazarika
+
+
