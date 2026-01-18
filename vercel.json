@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/(account|cart|checkout|order-history|product|success)",
+      "destination": "/public/$1.html"
+    }
+  ],
+  "trailingSlash": false
+}
