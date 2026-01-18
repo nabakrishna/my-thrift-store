@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product - TheThriftBee</title>
+    <link rel="stylesheet" href="entry.css">
+</head>
+<body>
+    <div id="toast-container"></div>
+    
+    <div class="form-container">
+        <h1>Add New Product</h1>
+        <p>Enter the details for the new thrifted item.</p>
+
+        <form id="product-form">
+
+            <div class="form-group">
+                <label for="product-name">Product Name *</label>
+                <input type="text" id="product-name" name="product-name" placeholder="e.g., Vintage Denim Jacket" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="product-size">Size *</label>
+                    <select id="product-size" name="product-size" required>
+                        <option value="">Select Size</option>
+                        <option value="Size XS">XS</option>
+                        <option value="Size S">S</option>
+                        <option value="Size M">M</option>
+                        <option value="Size L">L</option>
+                        <option value="Size XL">XL</option>
+                        <option value="Size XXL">XXL</option>
+                        <option value="One Size">One Size</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-price">Price *</label>
+                    <div class="price-input-container">
+                        <span>£</span> 
+                        <input type="number" id="product-price" name="product-price" placeholder="25.00" step="0.01" min="0" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="product-category">Category *</label>
+                <select id="product-category" name="product-category" required>
+                    <option value="">Select Category</option>
+                    <option value="shirt">Shirts</option>
+                    <option value="pants">Pants</option>
+                    <option value="winter">Winter</option>
+                    <option value="summer">Summer</option>
+                    <option value="jackets">Jackets</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="product-brand">Brand *</label>
+                <input type="text" id="product-brand" name="product-brand" placeholder="e.g., Vintage, H&M, Zara" required>
+            </div>
+
+            <div class="form-group">
+                <label for="product-colour">Colour *</label>
+                <input type="text" id="product-colour" name="product-colour" placeholder="e.g., Blue, Black, Multi" required>
+            </div>
+
+            <div class="form-group">
+                <label for="product-condition">Condition *</label>
+                <select id="product-condition" name="product-condition" required>
+                    <option value="">Select Condition</option>
+                    <option value="Excellent">Excellent (Like New)</option>
+                    <option value="Very Good">Very Good</option>
+                    <option value="Good">Good (Signs of Wear)</option>
+                    <option value="Fair">Fair (Visible Wear)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="product-materials">Materials *</label>
+                <input type="text" id="product-materials" name="product-materials" placeholder="e.g., Cotton, Polyester, Denim" required>
+            </div>
+
+            <div class="form-group">
+                <label for="product-description">Description *</label>
+                <textarea id="product-description" name="product-description" rows="4" placeholder="Describe the product, its style, fit, and any unique features..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="product-images">Product Images * (Multiple)</label>
+                <input type="file" id="product-images" name="product-images" accept="image/*" multiple required>
+                <small class="helper-text">You can select multiple images. First image will be the main display.</small>
+            </div>
+
+            <button type="submit" class="submit-btn">Add Product to Store</button>
+        </form>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+
+    <script src="entry.js"></script>
+</body>
+</html>

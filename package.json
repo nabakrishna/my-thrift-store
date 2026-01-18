@@ -1,0 +1,17 @@
+{
+  "name": "my-thrift-store",
+  "version": "1.0.0",
+  "description": "A thrift store e-commerce website deployed on Firebase Hosting.",
+  "main": "index.js",
+  "scripts": {
+    "start": "firebase serve",
+    "deploy": "firebase deploy",
+    "deploy:hosting": "firebase deploy --only hosting"
+  },
+  "author": "Naba Krishna Hazarika",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "firebase-tools": "^12.0.0"
+  }
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - TheThriftBee</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+
+    <div class="top-banner">
+        <p>SPECIAL OFFER: GET 20% OFF + FREE SHIPPING | CODE: THRIFT20 | <span class="banner-cta">SHOP NOW</span></p>
+    </div>
+
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="images/thethrftbeelogo.png" alt="TheThriftBee Logo"> <span>TheThriftBee</span>
+            </div>
+            <div class="nav-right">
+                <div class="search-container">
+                    <input type="text" id="search-bar" placeholder="Search...">
+                    <button class="search-btn">
+                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <a href="index.html" class="icon-link" title="Home">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </a>
+                
+                <a href="wishlist.html" class="icon-link icon-with-badge" title="Wishlist">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                    <span id="wishlist-count-badge" class="badge hidden">0</span>
+                </a>
+                
+                <a href="account.html" class="icon-link" title="Account" id="account-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </a>
+                
+                <a href="cart.html" class="icon-link icon-with-badge" title="Cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    </svg>
+                    <span id="cart-count-badge" class="badge hidden">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="account-container">
+            
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-form="login">Login</button>
+                <button class="tab-btn" data-form="signup">Sign Up</button>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <div class="form-content active" id="login-form-content">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+
+                <p class="form-toggle-prompt">
+                    Don't have an account? <span id="show-signup-btn">Sign Up</span>
+                </p>
+            </div>
+
+            <!-- SIGN UP FORM -->
+            <div class="form-content" id="signup-form-content">
+                <form id="signup-form">
+                    <h3 style="margin-bottom: 1rem; color: #333;">Personal Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" placeholder="Your Full Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" placeholder="you@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-phone">Phone Number (10 digits)</label>
+                        <div class="verification-input-group">
+                            <input type="tel" id="signup-phone" placeholder="1234567890" maxlength="10" required>
+                            <button type="button" id="send-signup-otp-btn" class="verification-btn">Verify</button>
+                        </div>
+                    </div>
+
+                    <h3 style="margin: 1.5rem 0 1rem 0; color: #333;">Shipping Address</h3>
+                    
+                    <div class="form-group">
+                        <label for="signup-address">Address</label>
+                        <input type="text" id="signup-address" placeholder="123 Main Street" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signup-city">City</label>
+                            <input type="text" id="signup-city" placeholder="Your City" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signup-zip">Zip Code</label>
+                            <input type="text" id="signup-zip" placeholder="123456" required>
+                        </div>
+                    </div>
+
+                    <h3 style="margin: 1.5rem 0 1rem 0; color: #333;">Account Security</h3>
+                    
+                    <div class="form-group">
+                        <label for="signup-password">Password (min. 6 characters)</label>
+                        <input type="password" id="signup-password" placeholder="Create a Password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-password-confirm">Confirm Password</label>
+                        <input type="password" id="signup-password-confirm" placeholder="Confirm Password" required>
+                    </div>
+
+                    <button type="submit" id="signup-btn" disabled>Create Account</button>
+                </form>
+
+                <p class="form-toggle-prompt">
+                    Already have an account? <span id="show-login-btn">Login</span>
+                </p>
+            </div>
+
+        </div>
+        <div id="toast-container"></div>
+    </main>    
+    
+    <footer>
+        <div class="footer-container">
+            <!-- About Section with Social Icons -->
+            <div class="footer-top">
+                <div class="footer-about">
+                    <h3>About Thrifted Clothes</h3>
+                    <p>Discover one of the world's largest online consignment & thrift stores. Shop like-new and used clothing at up to 90% off estimated retail at our online thrift store. From premium brands to everyday essentials, we have all your favorite brands for less. Happy thrifting!</p>
+                </div>
+                
+                <!-- Social Icons -->
+                <div class="footer-social">
+                    <h3>Connect with Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+                                <path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Pinterest">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter/X">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <!-- Footer Links - Center aligned -->
+        <div class="footer-links">
+            <a href="terms.html">Terms of Use</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="accessibility.html">Accessibility</a>
+            <a href="do-not-sell.html">Do Not Sell My Personal Information</a>
+            <a href="privacy-choices.html">Your Privacy Choices</a>
+            <a href="#" onclick="promptForAdmin()" style="color: #4a90e2; font-weight: bold; cursor: pointer;">Add Product (Admin("don't mess with inspect, i can do some thing that you can never imagine"))</a>
+        </div>
+        </div>
+        <!-- Copyright Section - Center aligned -->
+        <div class="footer-copyright">
+            <p>© 2025 Thrifted Clothes Inc. All Rights Reserved.</p>
+            <p class="footer-help">Having problems using a screen reader on this website? Call (+91) 8453993150 for help.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="account.js"></script>
+
+</body>
+</html>
