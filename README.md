@@ -48,8 +48,8 @@ A modern, responsive e-commerce web application designed for a sustainable thrif
 4. Open index.html in your browser (use Live Server in VS Code for best results).
 
 ## 📝 License
- This project is part of my web development portfolio.
 
 Developed by Naba Krishna Hazarika
+
 
 
