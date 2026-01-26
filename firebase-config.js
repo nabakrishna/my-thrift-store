@@ -1,4 +1,4 @@
-
+//this server is down
 const firebaseConfig = {
   apiKey: "AIzaSyBQCH4CZpiX20CXdzpY_wbAHZoOdLr0uB4",
   authDomain: "thethriftbee.firebaseapp.com",
