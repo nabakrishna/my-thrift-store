@@ -1,3 +1,4 @@
+
 // ===== GLOBAL STATE =====
 let currentProductImageIndex = 0;
 let currentProductImages = [];
@@ -691,7 +692,7 @@ function updateAccountLink() {
 
 
 
-//f
+// ===== FOOTER LINK HANDLER FOR 404 =====
 document.addEventListener('DOMContentLoaded', function() {
     // Get all links in your footer or specific container
     const links = document.querySelectorAll('a[href$=".html"]');
@@ -715,3 +716,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// ===== TOP BANNER AUTO-HIDE =====
+const banner = document.querySelector('.top-banner');
+if (banner) {
+    // 1. Check if the banner was already hidden during this session
+    if (sessionStorage.getItem('bannerHidden') === 'true') {
+        banner.style.display = 'none';
+    } else {
+        // 2. If not hidden, start a 7-second timer
+        setTimeout(() => {
+            banner.style.display = 'none';
+            // 3. Save the state so it stays hidden if they refresh or move pages
+            sessionStorage.setItem('bannerHidden', 'true');
+        }, 7000); // 7000 milliseconds = 7 seconds
+    }
+}
