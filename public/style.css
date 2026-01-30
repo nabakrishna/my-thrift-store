@@ -872,3 +872,15 @@ button:hover {
     opacity: 0.8;
     pointer-events: all; /* Keep this so the 'Already in cart' toast still works */
 }
+
+/* 3. Top Banner Close Button */
+/* Standard Desktop Styles */
+.top-banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px; /* Added side padding to make room for the X */
+    text-align: center;
+}
+
