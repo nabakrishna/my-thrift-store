@@ -1,5 +1,17 @@
-**future extension** 
+**future extension** (asap)
 
-1.email verification
-2.dynamic storage handling
-3.database
+1.email verification(idk)
+
+**db**-
+for the db we can go for supabase for now that we can handle the storage and database in one place and it has a free tier that should be 
+sufficient for our needs. We can also consider other options like Firebase or AWS Amplify if we need more advanced features in the future.
+for email verification we can use a service like SendGrid or Mailgun to send verification emails to users when they sign up. 
+We can also implement a simple token-based verification system where we generate a unique token for each user and send it in the verification email. When the user clicks the verification link, we can verify the token and activate their account.
+
+
+**react**-
+i have use react that gives more flexibility and scalability to the project.
+ It allows us to create reusable components and manage the state of our application more efficiently. 
+ e can also use libraries like React Router for handling navigation and Axios for making API calls to our backend.
+
+
