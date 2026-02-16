@@ -115,21 +115,37 @@ footer {
     font-size: 14px;
 }
 
+
 .search-btn {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #666;
-    transition: color 0.3s;
+    transition: all 0.3s;
+    border-radius: 50%;
 }
 
 .search-btn:hover {
-    color: #333;
+    background: transparent;  /* No background glow */
 }
+
+/* Only glow the SVG icon */
+.search-btn svg {
+    transition: all 0.3s;
+    filter: drop-shadow(0 0 0 transparent);
+}
+
+.search-btn:hover svg {
+    color: #28a745;  /* Green color */
+    filter: drop-shadow(0 0 8px rgba(40, 167, 69, 0.6));  /* Green glow */
+    transform: scale(1.1);  /* Slightly bigger */
+}
+
+
 
 /* Navigation Icons */
 .icon-link {
