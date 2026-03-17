@@ -1,19 +1,18 @@
 {
   "name": "my-thrift-store",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "description": "A thrift store e-commerce website deployed on Firebase Hosting.",
   "main": "index.js",
   "scripts": {
-    "start": "vercel deploy",
-    "deploy": "vercel deploy",
-    "deploy:hosting": "vercel deploy --only hosting"
+    "start": "firebase deploy",
+    "deploy": "firebase deploy",
+    "deploy:hosting": "firebase --only hosting"
   },
   "author": "Naba Krishna Hazarika",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "firebase-tools": "^12.0.0"
-    "vercel-tools": "^6.0.0"
   }
 }
 
