@@ -14,7 +14,7 @@ A modern, responsive e-commerce web application designed for a sustainable thrif
 
 ## 🛠️ Tech Stack
 * **Frontend:** HTML5, CSS3, JavaScript (ES6)
-* **Icons:** FontAwesome / Google Fonts
+* **Icons:** FontAwesome / Google Fonts 
 * **Deployment:** Vercel
 
 ## 📁 Project Structure
