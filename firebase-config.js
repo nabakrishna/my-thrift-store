@@ -1,13 +1,13 @@
 //not working, firebase server is down
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBQCH4CZpiX20CXdzpY_wbAHZoOdLr0uB4",
+  apiKey: "#########iX20CXdzpY_wbAHZoOdLr0uB4",
   authDomain: "thethriftbee.firebaseapp.com",
   projectId: "thethriftbee",
   storageBucket: "thethriftbee.appspot.com",
-  messagingSenderId: "1058449030849",
-  appId: "1:1058449030849:web:1667f1bd87d7aaf09a9e40",
-  measurementId: "G-ZXYMV7TS6Z"
+  messagingSenderId: "1058########430849",
+  appId: "1:10####49030849:web:1667f1###7aaf09a9e40",
+  measurementId: "G-ZXYMV##S6Z"
 };
 
 // Initialize Firebase
