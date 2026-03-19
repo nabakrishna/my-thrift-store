@@ -1,4 +1,4 @@
-//not working, firebase server is down
+//not working, firebase server is down 
 
 const firebaseConfig = {
   apiKey: "#########iX20CXdzpY_wbAHZoOdLr0uB4",
